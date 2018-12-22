@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+
 
 namespace MonkeyTalk
 {
@@ -17,7 +19,8 @@ namespace MonkeyTalk
             {
                 count = 1;
             }
-            return sentences[count-1];
+
+            return JsonConvert.SerializeObject( new TalkMember( sentences[count-1]));
         }
     }
 }

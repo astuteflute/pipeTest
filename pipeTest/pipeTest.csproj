@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonkeyTalk\MonkeyTalk.csproj">
+      <Project>{6aba688c-bb09-42c3-a140-a1b0a7e809c2}</Project>
+      <Name>MonkeyTalk</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

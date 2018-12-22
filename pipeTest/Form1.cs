@@ -13,7 +13,7 @@ namespace pipeTest
 
         private async void btnPressMe_Click(object sender, EventArgs e)
         {
-            lblResponse.Text = "eee eech eeie";
+            lblResponse.Text = MonkeyTalk.MonkeySentence.GetSentence();
             lblResponse.Visible = true;
             await Task.Delay(2000);
             lblResponse.Visible = false;

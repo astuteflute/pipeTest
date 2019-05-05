@@ -29,8 +29,13 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: 'bin\**'
+    contents: '**\bin\**'
     targetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: PowerShell@2
+  inputs:
+    filePath: artifactStagingReorganize.ps1
+    arguments: -verbose
 
 - task: PublishBuildArtifacts@1
   inputs:

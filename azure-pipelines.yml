@@ -32,6 +32,11 @@ steps:
     contents: '**\bin\**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: '$(buildConfiguration)$(Build.BuildNumber)' 
+
 - task: PowerShell@2
   inputs:
     filePath: artifactStagingReorganize.ps1
@@ -41,4 +46,4 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: '$(buildConfiguration)$(Build.BuildNumber)' 
+    artifactName: 'rework$(buildConfiguration)$(Build.BuildNumber)' 

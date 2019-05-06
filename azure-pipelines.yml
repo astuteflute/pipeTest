@@ -35,6 +35,7 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: artifactStagingReorganize.ps1
+    arguments: '-Verbose'
     failOnStderr: true
 
 - task: PublishBuildArtifacts@1

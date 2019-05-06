@@ -36,6 +36,7 @@ steps:
   inputs:
     filePath: artifactStagingReorganize.ps1
     arguments: -verbose
+    failOnStderr: true
 
 - task: PublishBuildArtifacts@1
   inputs:
